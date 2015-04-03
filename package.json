@@ -22,6 +22,7 @@
     "grunt-modernizr": "^0.5.2",
     "grunt-sass": "^0.18.1",
     "grunt-stylestats": "~0.1.2",
-    "matchdep": "~0.1.2"
+    "matchdep": "~0.1.2",
+    "grunt-svgmin": "^2.0.1"
   }
 }

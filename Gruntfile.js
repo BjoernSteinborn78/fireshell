@@ -232,6 +232,31 @@ module.exports = function (grunt) {
             }
         },
 
+        svgmin: {
+            options: {
+                plugins: [
+                    {
+                        removeViewBox: false
+                    }, {
+                        removeUselessStrokeAndFill: false
+                    }
+                ]
+            },
+            dist: {
+              files: [
+                  {
+                      expand: true,
+                      cwd: '<%= project.assets %>/img',
+                      src: [
+                          '*.svg',
+                          '**/*.svg',
+                      ],
+                      dest: '<%= project.assets %>/img'
+                  }
+              ]
+            }
+        },
+
         modernizr: {
             all: {
                 devFile : '',
@@ -325,6 +350,7 @@ module.exports = function (grunt) {
             'copy:bower',
             'copy:img',
             'imagemin',
+            'svgmin',
             'uglify:'+ target,
             'modernizr',
             'sass:'+ target,
