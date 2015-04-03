@@ -19,7 +19,7 @@ Copies all the required files for a clean install for setting up a new project. 
 
 Now `cd` into your new project directory and run the init script:
 
-#### `new-project/ $ ./init.sh`
+#### `new-project/ $ sudo bash ./init.sh`
 
 This should install all the required files (npm & bower) and copy any initial bower dependencies to get you started.
 
