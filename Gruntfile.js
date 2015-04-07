@@ -365,7 +365,7 @@ module.exports = function (grunt) {
      * Remove this task after starting a newly exported project.
      */
     grunt.registerTask('new', 'Exports the contents of this repo, ready for a new project. $ grunt new --target=your/project', function (target) {
-        var target = grunt.option('target') || "new-project";
+        var target = target || "new-project";
         var dirPath = process.cwd() + "/../" + target + "/";
         var dirExists = grunt.file.isDir(dirPath);
 
